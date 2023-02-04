@@ -3,11 +3,13 @@ import CategoryItem from '../category-item/category-item.component'
 
 const CategoryMenu = ({categories}) => {
     return (
-        categories.map((category)=>{
-            return(
-                <CategoryItem key={category.id} category={category} />
-            )
-        })
+        <div className="category-menu">
+            {categories.map((category)=>{
+                return(
+                    <CategoryItem key={category.id} category={category} />
+                )
+            })}
+        </div>
     )
 }
 
